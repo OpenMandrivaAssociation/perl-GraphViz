@@ -1,7 +1,7 @@
 %define module	GraphViz
 %define name	perl-%{module}
 %define version 2.02
-%define release %mkrel 4
+%define release %mkrel 5
 
 Name:		%{name}
 Version:	%{version}
