@@ -15,10 +15,11 @@ Requires:	graphviz
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
-BuildRequires:	perl-Math-Bezier
-BuildRequires:	perl-IPC-Run
-BuildRequires:	perl-Graph
+BuildRequires:	perl(Math::Bezier)
+BuildRequires:	perl(IPC::Run)
+BuildRequires:	perl(Graph)
 BuildRequires:	graphviz
+BuildRequires:	fonts-ttf-dejavu
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
