@@ -21,7 +21,6 @@ BuildRequires:	perl(Graph)
 BuildRequires:	graphviz
 BuildRequires:	fonts-ttf-dejavu
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module provides an interface to layout and image generation of
