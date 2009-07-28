@@ -1,27 +1,27 @@
-%define module	GraphViz
-%define name	perl-%{module}
-%define version 2.04
-%define release %mkrel 1
+%define upstream_name	 GraphViz
+%define upstream_version 2.04
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Summary:	%{module} module for perl
-License:	GPL or Artistic
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
+
+Summary:	%{upstream_name} module for perl
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		http://search.cpan.org/CPAN/authors/id/L/LB/LBROCARD/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
-Requires:	graphviz
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/L/LB/LBROCARD/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
+BuildRequires:	fonts-ttf-dejavu
+BuildRequires:	graphviz
 BuildRequires:	perl(Math::Bezier)
 BuildRequires:	perl(IPC::Run)
 BuildRequires:	perl(Graph)
-BuildRequires:	graphviz
-BuildRequires:	fonts-ttf-dejavu
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+Requires:	graphviz
 
 %description
 This module provides an interface to layout and image generation of
@@ -31,7 +31,7 @@ project (http://www.graphviz.org/ or
 http://www.research.att.com/sw/tools/graphviz/). 
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -54,4 +54,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/GraphViz
 %{perl_vendorlib}/Devel
 %{_mandir}/*/*
-
