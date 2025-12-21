@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/L/LB/LBROCARD/%{upstream_name}-%{upstream_version}.tgz
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	fonts-ttf-dejavu
 BuildRequires:	graphviz
