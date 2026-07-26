@@ -1,15 +1,13 @@
 %define upstream_name	 GraphViz
-%define upstream_version 2.26
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	2.26
+Release:	2
 
 Summary:	%{upstream_name} module for perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/ronsavage/GraphViz
-Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETJ/GraphViz-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETJ/GraphViz-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -29,7 +27,7 @@ project (http://www.graphviz.org/ or
 http://www.research.att.com/sw/tools/graphviz/). 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -49,9 +47,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %changelog
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 2.40.0-1mdv2010.0
 + Revision: 402138
-- rebuild using %%perl_convert_version
-
-* Sun Dec 14 2008 Guillaume Rousse <guillomovitch@mandriva.org> 2.04-1mdv2009.1
+- rebuild using %2.26 Sun Dec 14 2008 Guillaume Rousse <guillomovitch@mandriva.org> 2.04-1mdv2009.1
 + Revision: 314246
 - update to new version 2.04
 
