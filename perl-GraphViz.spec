@@ -1,13 +1,14 @@
 %define upstream_name	 GraphViz
+%define upstream_version 2.26
 Name:		perl-%{upstream_name}
 Version:	2.26
-Release:	2
+Release:	1
 
 Summary:	%{upstream_name} module for perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/ronsavage/GraphViz
-Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETJ/GraphViz-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETJ/GraphViz-2.26.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -43,63 +44,4 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{perl_vendorlib}/Devel
 %{_mandir}/*/*
 
-
-%changelog
-* Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 2.40.0-1mdv2010.0
-+ Revision: 402138
-- rebuild using %2.26 Sun Dec 14 2008 Guillaume Rousse <guillomovitch@mandriva.org> 2.04-1mdv2009.1
-+ Revision: 314246
-- update to new version 2.04
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 2.03-3mdv2009.0
-+ Revision: 257132
-- rebuild
-- kill re-definition of %%buildroot on Pixel's request
-
-  + Olivier Blin <oblin@mandriva.com>
-    - restore BuildRoot
-
-* Mon Nov 19 2007 Guillaume Rousse <guillomovitch@mandriva.org> 2.03-1mdv2008.1
-+ Revision: 110398
-- update to new version 2.03
-
-* Sun Sep 16 2007 Guillaume Rousse <guillomovitch@mandriva.org> 2.02-5mdv2008.0
-+ Revision: 88421
-- rebuild
-
-
-* Thu Aug 31 2006 Guillaume Rousse <guillomovitch@mandriva.org> 2.02-4mdv2007.0
-- Rebuild
-
-* Thu Aug 31 2006 Guillaume Rousse <guillomovitch@mandriva.org> 2.02-3mdv2007.0
-- Rebuild
-
-* Mon Jan 23 2006 Guillaume Rousse <guillomovitch@mandriva.org> 2.02-2mdk
-- spec cleanup
-- %%mkrel
-- better URL
-
-* Thu Jan 13 2005 Guillaume Rousse <guillomovitch@mandrake.org> 2.02-1mdk 
-- new release
-- back in official contrib
-
-* Thu Sep 30 2004 Guillaume Rousse <guillomovitch@zarb.org> 2.01-1plf
-- New release 2.01
-
-* Sat Aug 28 2004 Guillaume Rousse <guillomovitch@zarb.org> 2.00-1plf
-- New release 2.00
-
-* Wed Aug 25 2004 Guillaume Rousse <guillomovitch@zarb.org> 1.9-1plf
-- new version 
-- PLF transfer
-- requires graphviz
-- no more explicit perl requires
-- fixed buildrequires
-
-* Fri Jul 23 2004 Guillaume Rousse <guillomovitch@mandrake.org> 1.8-4mdk 
-- rpmbuildupdate aware
-
-* Wed Feb 25 2004 Guillaume Rousse <guillomovitch@mandrake.org> 1.8-3mdk
-- fixed dir ownership (distlint)
-- %%makeinstall_std macro
 
