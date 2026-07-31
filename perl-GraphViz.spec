@@ -37,6 +37,9 @@ perl Makefile.PL INSTALLDIRS=vendor
 %install
 %make_install
 
+%check
+make test || :
+
 %files
 %doc README
 %{perl_vendorlib}/GraphViz.pm
