@@ -2,7 +2,7 @@
 %define upstream_version 2.26
 Name:		perl-%{upstream_name}
 Version:	2.26
-Release:	18
+Release:	19
 
 Summary:	%{upstream_name} module for perl
 License:	GPL+ or Artistic
@@ -11,6 +11,7 @@ Url:		https://github.com/ronsavage/GraphViz
 Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETJ/GraphViz-2.26.tar.gz
 
 BuildRequires:	make
+BuildRequires:	perl(File::Which)
 BuildRequires:	perl-devel
 BuildRequires:	fonts-ttf-dejavu
 BuildRequires:	graphviz
